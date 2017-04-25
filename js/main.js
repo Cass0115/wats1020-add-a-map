@@ -18,4 +18,12 @@
 // TODO: Customize that Map to show markers with popups at no fewer than 3
 // interesting locations. (You'll need to figure out the latitude/longitude for
 // these locations using a mapping tool such as Google Maps.)
-
+$(document).ready(function(){
+$('.carousel').carousel({
+  interval: 3500
+});
+});
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
