@@ -36,13 +36,13 @@ $('#tab-buttons a').click(function (e) {
 
 // maps
 
-var mymap = L.map('mapid').setView([46.852, 121.76], 13);
+var mymap = L.map('mapid').setView([46.852, -121.76], 13);
 
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
    maxZoom: 18,
-   id: 'your.mapbox.project.id',
-   accessToken: 'your.mapbox.public.access.token'
+   id: 'cass0115.71e60bd0',
+   accessToken: 'pk.eyJ1IjoiY2FzczAxMTUiLCJhIjoiY2oxenhzZGM2MDIwZjMycW00cGs4eTh4ciJ9.MxFv9u_YRj4D4F9HfDJkKw'
 }).addTo(mymap);
 });
