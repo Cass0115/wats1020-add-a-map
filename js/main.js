@@ -18,12 +18,31 @@
 // TODO: Customize that Map to show markers with popups at no fewer than 3
 // interesting locations. (You'll need to figure out the latitude/longitude for
 // these locations using a mapping tool such as Google Maps.)
+
+
 $(document).ready(function(){
+
+// carousel
 $('.carousel').carousel({
   interval: 3500
 });
-});
-$('#myTabs a').click(function (e) {
+
+// tabs
+$('#tab-buttons a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
-})
+});
+
+
+// maps
+
+var mymap = L.map('mapid').setView([46.852, 121.76], 13);
+
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+   maxZoom: 18,
+   id: 'your.mapbox.project.id',
+   accessToken: 'your.mapbox.public.access.token'
+}).addTo(mymap);
+});
